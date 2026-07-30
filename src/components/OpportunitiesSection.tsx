@@ -2,10 +2,10 @@ import { Briefcase, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const roles = [
-  { title: "Java Developer", icon: "☕" },
-  { title: "Software Developer", icon: "💻" },
-  { title: "Backend Developer", icon: "⚙️" },
-  { title: "Frontend Developer", icon: "🚀" },
+  { title: "Data Analyst", icon: "📊" },
+  { title: "Python Developer", icon: "🐍" },
+  { title: "Automation Engineer", icon: "🤖" },
+  { title: "Software Engineer", icon: "💻" },
 ];
 
 const OpportunitiesSection = () => {
@@ -29,12 +29,12 @@ const OpportunitiesSection = () => {
           </h2>
 
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-12 max-w-xl mx-auto">
-            Actively looking for opportunities to contribute as a Java developer and software engineer where I can apply my programming skills, problem-solving abilities, and passion for technology.
+            Actively seeking opportunities in software development, data analytics, and intelligent process automation where I can apply my Python, problem-solving, and workflow automation skills to build scalable solutions.
           </p>
         </div>
 
         <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          {roles.map((role, i) => (
+          {roles.map((role) => (
             <div
               key={role.title}
               className="group bg-card border border-border rounded-2xl p-5 text-center hover:border-muted-foreground/30 hover:-translate-y-1 transition-all duration-300 cursor-default"
