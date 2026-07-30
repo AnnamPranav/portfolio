@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,62 +8,62 @@
 
 :root {
   /* LIGHT MODE */
-  --background: 280 20% 98%;
-  --foreground: 280 40% 10%;
+  --background: 215 25% 98%;
+  --foreground: 220 40% 10%;
 
-  --terminal-green: 320 100% 55%; /* Neon Pink */
+  --terminal-green: 175 80% 40%;
 
   --card: 0 0% 100%;
-  --card-foreground: 280 40% 10%;
+  --card-foreground: 220 40% 10%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 280 40% 10%;
+  --popover-foreground: 220 40% 10%;
 
-  --primary: 320 100% 55%;
+  --primary: 210 100% 50%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 280 15% 92%;
-  --secondary-foreground: 280 40% 10%;
+  --secondary: 215 20% 92%;
+  --secondary-foreground: 220 40% 10%;
 
-  --muted: 280 15% 92%;
-  --muted-foreground: 280 15% 40%;
+  --muted: 215 20% 92%;
+  --muted-foreground: 220 15% 40%;
 
-  --accent: 185 100% 50%; /* Electric Cyan */
-  --accent-foreground: 280 40% 10%;
+  --accent: 175 80% 40%;
+  --accent-foreground: 0 0% 100%;
 
-  --border: 280 15% 88%;
-  --input: 280 15% 88%;
-  --ring: 320 100% 55%;
+  --border: 215 20% 88%;
+  --input: 215 20% 88%;
+  --ring: 210 100% 50%;
 }
 
 .dark {
   /* DARK MODE */
-  --background: 275 35% 6%;
-  --foreground: 280 20% 96%;
+  --background: 222 47% 7%;
+  --foreground: 210 40% 96%;
 
-  --terminal-green: 320 100% 60%; /* Hot Pink */
+  --terminal-green: 175 84% 50%; /* Electric Teal */
 
-  --card: 275 30% 9%;
-  --card-foreground: 280 20% 96%;
+  --card: 222 40% 10%;
+  --card-foreground: 210 40% 96%;
 
-  --popover: 275 30% 9%;
-  --popover-foreground: 280 20% 96%;
+  --popover: 222 40% 10%;
+  --popover-foreground: 210 40% 96%;
 
-  --primary: 320 100% 60%;
-  --primary-foreground: 275 35% 6%;
+  --primary: 217 91% 60%; /* Cobalt Royal Blue */
+  --primary-foreground: 222 47% 7%;
 
-  --secondary: 275 20% 15%;
-  --secondary-foreground: 280 20% 92%;
+  --secondary: 217 30% 16%;
+  --secondary-foreground: 210 40% 90%;
 
-  --muted: 275 20% 15%;
-  --muted-foreground: 280 15% 60%;
+  --muted: 217 30% 16%;
+  --muted-foreground: 215 20% 60%;
 
-  --accent: 185 100% 50%; /* Cyan Glow */
-  --accent-foreground: 275 35% 6%;
+  --accent: 175 84% 50%;
+  --accent-foreground: 222 47% 7%;
 
-  --border: 275 25% 18%;
-  --input: 275 25% 18%;
-  --ring: 320 100% 60%;
+  --border: 217 30% 18%;
+  --input: 217 30% 18%;
+  --ring: 217 91% 60%;
 }
 
 }
@@ -75,27 +75,27 @@
 
   body {
     @apply bg-background text-foreground font-mono;
-    font-family: 'Fira Code', monospace;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .font-mono {
-    font-family: 'Fira Code', monospace;
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
-/* Neon Glow */
+/* Ocean Ambient Glow */
 .terminal-glow {
-  box-shadow: 0 0 25px hsl(320 100% 60% / 0.25), inset 0 0 15px hsl(185 100% 50% / 0.1);
+  box-shadow: 0 0 25px hsl(217 91% 60% / 0.18), inset 0 0 15px hsl(175 84% 50% / 0.08);
 }
 
 html {
@@ -107,9 +107,9 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(275 35% 6%);
+  background: hsl(222 47% 7%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(320 100% 60% / 0.5);
+  background: hsl(217 91% 60% / 0.4);
   border-radius: 3px;
 }
