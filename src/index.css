@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,63 +7,63 @@
 @layer base {
 
 :root {
-  /* LIGHT MODE - Paper & Ink */
-  --background: 0 0% 98%;          /* Crisp Off-White */
-  --foreground: 0 0% 9%;           /* Deep Ink Black */
+  /* LIGHT MODE */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 4%;
 
-  --terminal-green: 0 0% 9%;       /* Pure Monochromatic Contrast */
+  --terminal-green: 142 72% 50%;
 
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
+  --card-foreground: 240 10% 4%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 9%;
+  --popover-foreground: 240 10% 4%;
 
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
+  --primary: 240 10% 4%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 94%;
-  --secondary-foreground: 0 0% 15%;
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 10% 4%;
 
-  --muted: 0 0% 94%;
-  --muted-foreground: 0 0% 45%;
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 40%;
 
-  --accent: 0 0% 90%;
-  --accent-foreground: 0 0% 9%;
+  --accent: 240 5% 96%;
+  --accent-foreground: 240 10% 4%;
 
-  --border: 0 0% 89%;              /* Subtle Divider Lines */
-  --input: 0 0% 89%;
-  --ring: 0 0% 9%;
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 240 10% 4%;
 }
 
 .dark {
-  /* DARK MODE - Matte Charcoal & Warm White */
-  --background: 0 0% 5%;           /* Soft Charcoal Black (No harsh #000) */
-  --foreground: 0 0% 93%;          /* Warm White Text */
+  /* DARK MODE */
+  --background: 0 0% 3%;
+  --foreground: 0 0% 95%;
 
-  --terminal-green: 0 0% 93%;      /* Pure White Accent */
+  --terminal-green: 142 72% 50%;
 
-  --card: 0 0% 8%;                 /* Slightly Lifted Surface */
-  --card-foreground: 0 0% 93%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 95%;
 
-  --popover: 0 0% 8%;
-  --popover-foreground: 0 0% 93%;
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 95%;
 
-  --primary: 0 0% 93%;             /* Pure Contrast Primary */
-  --primary-foreground: 0 0% 5%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 3%;
 
-  --secondary: 0 0% 13%;
-  --secondary-foreground: 0 0% 85%;
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 90%;
 
-  --muted: 0 0% 13%;
-  --muted-foreground: 0 0% 52%;    /* Muted Secondary Text */
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 55%;
 
   --accent: 0 0% 18%;
-  --accent-foreground: 0 0% 93%;
+  --accent-foreground: 0 0% 95%;
 
-  --border: 0 0% 15%;              /* Crisp Thin Borders */
-  --input: 0 0% 15%;
-  --ring: 0 0% 80%;
+  --border: 0 0% 18%;
+  --input: 0 0% 18%;
+  --ring: 0 0% 60%;
 }
 
 }
@@ -74,20 +74,12 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.015em;
-  }
-
-  /* Monospace specifically for code tags, terminal sections, and dates */
-  code, pre, .font-mono {
+    @apply bg-background text-foreground font-mono;
     font-family: 'JetBrains Mono', monospace;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
-    letter-spacing: -0.03em;       /* Tight editorial headings */
-    font-weight: 600;
   }
 }
 
@@ -101,28 +93,38 @@
   }
 }
 
-/* Subtle, sharp border highlight instead of cheesy colored glow */
-.terminal-glow {
-  border: 1px solid hsl(var(--border));
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+/* Typewriter cursor */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-/* Instant clean cuts */
+.cursor-blink {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+/* Terminal glow */
+.terminal-glow {
+  box-shadow: 0 0 20px hsl(0 0% 100% / 0.05), inset 0 0 20px hsl(0 0% 100% / 0.02);
+}
+
+/* Smooth scroll + theme transition */
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Ultra-thin architectural scrollbar */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: hsl(0 0% 5%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
-  border-radius: 2px;
+  background: hsl(0 0% 25%);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
+  background: hsl(0 0% 35%);
 }
