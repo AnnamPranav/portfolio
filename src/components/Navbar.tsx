@@ -19,42 +19,43 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <a href="#" className="font-display text-xl font-bold tracking-tight">
           <span className="text-muted-foreground font-light">{"<"}</span>
-          Sathvik
+          Pranav
           <span className="text-muted-foreground font-light">{" />"}</span>
         </a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-  {navLinks.map((link) => (
-    <a
-      key={link.href}
-      href={link.href}
-      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-    >
-      {link.label}
-    </a>
-  ))}
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
 
-  <ThemeToggle />
+          <ThemeToggle />
 
-  <a
-    href="#contact"
-    className="text-sm bg-primary text-primary-foreground px-5 py-2 rounded-full hover:bg-primary/90 transition-colors"
-  >
-    Let's Talk →
-  </a>
-</div>
+          <a
+            href="#contact"
+            className="text-sm bg-primary text-primary-foreground px-5 py-2 rounded-full hover:bg-primary/90 transition-colors"
+          >
+            Let's Talk →
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-2 md:hidden">
-  <ThemeToggle />
-  <button
-    onClick={() => setOpen(!open)}
-    className="text-foreground"
-  >
-    {open ? <X size={24} /> : <Menu size={24} />}
-  </button>
-</div>
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-foreground"
+            aria-label="Toggle navigation menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
