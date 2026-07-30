@@ -1,25 +1,27 @@
-# Sathvik Rudam – Developer Portfolio
+# Annam Pranav Reddy – Developer Portfolio
 
 This is my personal developer portfolio website built using **React, TypeScript, and Tailwind CSS**.
-It showcases my projects, skills, education, and contact information.
+It showcases my projects, technical skills, education, internships, certifications, and contact information.
 
-The portfolio is designed with a **modern developer-style UI** and highlights my interest in **Software Development, Data Structures & Algorithms, and problem solving**.
+The portfolio is designed with a **modern developer-style UI** and highlights my interests in **Software Development, Artificial Intelligence, Computer Vision, IoT, Data Analytics, and Automation**.
 
 ---
 
 ## 🌐 Live Website
 
 Portfolio Link:
-https://sathvikrudam.vercel.app
+
+https://your-portfolio-link.vercel.app
 
 ---
 
 ## 🚀 Features
 
 * Modern developer-style UI
-* Responsive design for desktop and mobile
-* Sections for About, Education, Skills, Projects, and Contact
+* Fully responsive design for desktop and mobile
+* Sections for About, Education, Skills, Projects, Internships, Certifications, and Contact
 * Smooth animations and scroll effects
+* Showcases AI, IoT, Automation, and Data Analytics projects
 * Easy to customize and extend
 
 ---
@@ -38,8 +40,8 @@ This project is built using:
 
 ## 📂 Project Structure
 
-```
-aboutme
+```text
+portfolio
 │
 ├── public
 │   ├── favicon.ico
@@ -56,7 +58,9 @@ aboutme
 │   │   ├── HeroSection.tsx
 │   │   ├── Navbar.tsx
 │   │   ├── ProjectsSection.tsx
-│   │   └── SkillsSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   ├── InternshipSection.tsx
+│   │   └── CertificationsSection.tsx
 │   │
 │   ├── hooks
 │   ├── pages
@@ -79,31 +83,31 @@ Make sure **Node.js** is installed.
 
 Clone the repository:
 
-```
-git clone https://github.com/YOUR_USERNAME/portfolio.git
+```bash
+git clone https://github.com/AnnamPranav/portfolio.git
 ```
 
 Navigate to the project directory:
 
-```
+```bash
 cd portfolio
 ```
 
 Install dependencies:
 
-```
+```bash
 npm install
 ```
 
 Run the development server:
 
-```
+```bash
 npm run dev
 ```
 
-Open in browser:
+Open in your browser:
 
-```
+```text
 http://localhost:5173
 ```
 
@@ -113,11 +117,11 @@ http://localhost:5173
 
 To create an optimized production build:
 
-```
+```bash
 npm run build
 ```
 
-The production files will be generated inside the `dist` folder.
+The production-ready files will be generated inside the **dist** folder.
 
 ---
 
@@ -129,7 +133,7 @@ This project can be deployed easily using:
 * **Netlify**
 * **GitHub Pages**
 
-Recommended option: **Vercel** for automatic deployment from GitHub.
+Recommended option: **Vercel** for seamless deployment directly from GitHub.
 
 ---
 
