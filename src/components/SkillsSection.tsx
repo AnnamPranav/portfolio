@@ -107,7 +107,7 @@ const SkillsSection = () => {
               <div
                 key={group.title}
                 className={`bg-card border border-border rounded-2xl overflow-hidden
-                  hover:border-muted-foreground/30 hover:shadow-[0_0_20px_rgba(34,197,94,0.12)]
+                  hover:border-muted-foreground/30 hover:shadow-[0_0_20px_rgba(34,197,94,0.08)]
                   transition-all duration-700
                   ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: `${(gi + 2) * 150}ms` }}
@@ -130,20 +130,18 @@ const SkillsSection = () => {
                         <span className="text-sm text-foreground font-medium">
                           {skill.name}
                         </span>
-                        <span className="text-xs font-mono text-green-400 font-bold">
+                        <span className="text-xs font-mono text-terminal-green font-medium">
                           {skill.level}%
                         </span>
                       </div>
 
-                      {/* Fluorescent Green Glow Bar Container */}
-                      <div className="h-2 bg-muted/60 rounded-full overflow-hidden p-[1px] border border-green-500/20">
+                      {/* Clean Theme-matched Progress Bar */}
+                      <div className="h-1.5 bg-muted/60 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-emerald-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_12px_#22c55e]"
+                          className="h-full bg-terminal-green rounded-full transition-all duration-1000 ease-out shadow-[0_0_8px_rgba(34,197,94,0.4)]"
                           style={{
                             width: isVisible ? `${skill.level}%` : "0%",
                             transitionDelay: `${(gi + 2) * 150 + 300}ms`,
-                            backgroundColor: "#39FF14", // Fluorescent neon green
-                            boxShadow: "0 0 10px #39FF14, 0 0 4px #22c55e",
                           }}
                         />
                       </div>
@@ -180,7 +178,7 @@ const SkillsSection = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-between p-3 rounded-xl border border-border
                       hover:border-muted-foreground/30 hover:bg-muted/20
-                      hover:shadow-[0_0_20px_rgba(57,255,20,0.15)]
+                      hover:shadow-[0_0_15px_rgba(34,197,94,0.08)]
                       transition-all duration-500"
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
