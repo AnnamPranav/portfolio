@@ -6,26 +6,26 @@ const contacts = [
   {
     icon: Mail,
     label: "Email",
-    value: "rudamsathvik@gmail.com",
-    href: "mailto:rudamsathvik@gmail.com",
+    value: "annampranav05@gmail.com",
+    href: "mailto:annampranav05@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 8309662141",
-    href: "tel:+918309662141",
+    value: "+91 7386535953",
+    href: "tel:+917386535953",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "sathvikrudam",
-    href: "https://www.linkedin.com/in/sathvikrudam/",
+    value: "pranav-annam",
+    href: "https://www.linkedin.com/in/pranav-annam-65b283218/",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "sathvikrudam",
-    href: "https://github.com/sathvikrudam",
+    value: "AnnamPranav",
+    href: "https://github.com/AnnamPranav",
   },
 ];
 
@@ -98,18 +98,18 @@ const ContactSection = () => {
                   </div>
 
                   <button
-  onClick={() => handleCopy(value, label)}
-  className="transition-colors"
-  title="Copy"
->
-  {copied === label ? (
-    <span className="text-xs font-mono text-terminal-green animate-pulse">
-  ✓ Copied
-</span>
-  ) : (
-    <Copy size={14} />
-  )}
-</button>
+                    onClick={() => handleCopy(value, label)}
+                    className="transition-colors text-muted-foreground hover:text-foreground"
+                    title="Copy"
+                  >
+                    {copied === label ? (
+                      <span className="text-xs font-mono text-terminal-green animate-pulse">
+                        ✓ Copied
+                      </span>
+                    ) : (
+                      <Copy size={14} />
+                    )}
+                  </button>
 
                 </div>
 
@@ -151,7 +151,7 @@ const ContactSection = () => {
               </p>
 
               <a
-                href="mailto:rudamsathvik@gmail.com"
+                href="mailto:annampranav05@gmail.com"
                 className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm font-medium hover:shadow-[0_0_30px_hsl(0_0%_100%/0.15)] transition-all duration-300"
               >
                 <Mail size={16} />
