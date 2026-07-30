@@ -3,14 +3,28 @@ import { Award, ArrowUpRight } from "lucide-react";
 export default function CertificationsSection() {
   const certifications = [
     {
-      name: "Agentforce Specialist",
-      issuer: "Salesforce",
-      link: "/certificates/salesforce.pdf",
+      name: "Smart India Hackathon Grand Finale (Runner)",
+      issuer: "Ministry of Education, AICTE",
+      date: "December 2024",
+      link: "/certificates/sih-2024.pdf",
     },
     {
-      name: "MongoDB",
-      issuer: "GeeksforGeeks",
-      link: "/certificates/mongodb.pdf",
+      name: "AWS Certification",
+      issuer: "MassMutual",
+      date: "October 2025",
+      link: "/certificates/aws-massmutual.pdf",
+    },
+    {
+      name: "Full Stack Development",
+      issuer: "Infosys Springboard",
+      date: "July 2025",
+      link: "/certificates/fullstack-infosys.pdf",
+    },
+    {
+      name: "YeSummit",
+      issuer: "TGIC",
+      date: "November 2024",
+      link: "/certificates/yesummit.pdf",
     },
   ];
 
@@ -51,11 +65,16 @@ export default function CertificationsSection() {
               <div className="relative flex items-center justify-between p-8">
 
                 {/* Certificate Info */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-full">
 
-                  <h3 className="font-display font-bold text-xl text-foreground group-hover:text-foreground transition-colors">
-                    {cert.name}
-                  </h3>
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-display font-bold text-xl text-foreground group-hover:text-foreground transition-colors">
+                      {cert.name}
+                    </h3>
+                    <span className="font-mono text-xs text-terminal-green shrink-0 bg-muted/50 px-2.5 py-1 rounded-md border border-border">
+                      {cert.date}
+                    </span>
+                  </div>
 
                   <p className="text-sm text-muted-foreground">
                     {cert.issuer}
@@ -65,7 +84,7 @@ export default function CertificationsSection() {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mt-2"
+                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mt-2 w-fit"
                   >
                     View Certificate <ArrowUpRight size={16} />
                   </a>
