@@ -6,64 +6,64 @@ const skillGroups = [
     title: "Programming Languages",
     icon: "{ }",
     skills: [
-      { name: "Java", level: 90 },
-      { name: "Python", level: 70 },
-      { name: "C", level: 65 },
+      { name: "Python", level: 90 },
+      { name: "C", level: 75 },
+      { name: "JavaScript", level: 75 },
+      { name: "SQL", level: 80 },
     ],
   },
   {
-    title: "Core CS",
-    icon: "⟨⟩",
+    title: "Automation & Process",
+    icon: "⚙️",
     skills: [
-      { name: "Data Structures & Algorithms", level: 85 },
-      { name: "Object Oriented Programming", level: 85 },
-      { name: "DBMS", level: 70 },
+      { name: "Automation Anywhere", level: 85 },
+      { name: "Microsoft Power Automate", level: 80 },
+      { name: "Workflow Automation", level: 85 },
+      { name: "REST APIs & JSON", level: 75 },
     ],
   },
   {
-    title: "Web Development",
-    icon: "</>",
-    skills: [
-      { name: "HTML", level: 80 },
-      { name: "CSS", level: 75 },
-      { name: "JavaScript", level: 70 },
-    ],
-  },
-  {
-    title: "Tools & Platforms",
+    title: "Tools & Analytics",
     icon: "$ _",
     skills: [
-      { name: "Git", level: 75 },
-      { name: "GitHub", level: 80 },
+      { name: "Power BI", level: 85 },
+      { name: "Microsoft Excel", level: 90 },
+      { name: "Git & GitHub", level: 85 },
+      { name: "Figma", level: 70 },
+    ],
+  },
+  {
+    title: "Cloud & Databases",
+    icon: "☁️",
+    skills: [
+      { name: "AWS (Basic)", level: 65 },
+      { name: "MySQL Workbench", level: 80 },
+      { name: "MongoDB", level: 70 },
+      { name: "Firebase", level: 70 },
     ],
   },
 ];
 
 const codingProfiles = [
   {
-    name: "LeetCode",
-    username: "sathvikrudam",
-    link: "https://leetcode.com/sathvikrudam",
+    name: "GitHub",
+    username: "AnnamPranav",
+    link: "https://github.com/AnnamPranav",
   },
   {
-    name: "CodeChef",
-    username: "stvk_rdm",
-    link: "https://www.codechef.com/users/stvk_rdm",
+    name: "LinkedIn",
+    username: "pranav-annam",
+    link: "https://www.linkedin.com/in/pranav-annam-65b283218/",
   },
   {
-    name: "HackerRank",
-    username: "sathvikrudam",
-    link: "https://www.hackerrank.com/profile/sathvikrudam",
+    name: "Infosys Springboard",
+    username: "Full Stack Dev",
+    link: "#",
   },
   {
-    name: "GeeksforGeeks",
-    username: "stvk_rdm",
-    link: "https://www.geeksforgeeks.org/profile/stvk_rdm",
-  },
-  {
-    name: "Codeforces",
-    username: "sathvikrudam",
-    link: "https://codeforces.com/profile/sathvikrudam",
+    name: "AWS Learning",
+    username: "Cloud Basics",
+    link: "#",
   },
 ];
 
@@ -130,17 +130,20 @@ const SkillsSection = () => {
                         <span className="text-sm text-foreground font-medium">
                           {skill.name}
                         </span>
-                        <span className="text-xs font-mono text-muted-foreground">
+                        <span className="text-xs font-mono text-green-400 font-bold">
                           {skill.level}%
                         </span>
                       </div>
 
-                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                      {/* Fluorescent Green Glow Bar Container */}
+                      <div className="h-2 bg-muted/60 rounded-full overflow-hidden p-[1px] border border-green-500/20">
                         <div
-                          className="h-full bg-foreground/70 rounded-full transition-all duration-1000 ease-out"
+                          className="h-full bg-emerald-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_12px_#22c55e]"
                           style={{
                             width: isVisible ? `${skill.level}%` : "0%",
                             transitionDelay: `${(gi + 2) * 150 + 300}ms`,
+                            backgroundColor: "#39FF14", // Fluorescent neon green
+                            boxShadow: "0 0 10px #39FF14, 0 0 4px #22c55e",
                           }}
                         />
                       </div>
@@ -151,7 +154,7 @@ const SkillsSection = () => {
             ))}
           </div>
 
-          {/* Coding Profiles */}
+          {/* Profiles & Links */}
           <div
             className={`transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -163,7 +166,7 @@ const SkillsSection = () => {
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-muted/20">
                 <h3 className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-                  Coding Profiles
+                  Profiles & Certifications
                 </h3>
               </div>
 
@@ -177,7 +180,7 @@ const SkillsSection = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-between p-3 rounded-xl border border-border
                       hover:border-muted-foreground/30 hover:bg-muted/20
-                      hover:shadow-[0_0_20px_rgba(34,197,94,0.15)]
+                      hover:shadow-[0_0_20px_rgba(57,255,20,0.15)]
                       transition-all duration-500"
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
