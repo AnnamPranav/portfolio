@@ -4,9 +4,9 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const titles = [
   "Computer Science Engineering Student",
-  "Passionate Java Developer",
-  "Focused on Data Structures & Algorithms",
-  "AI & ML Enthusiast",
+  "Automation & Data Analytics Enthusiast",
+  "Python & Workflow Automation Developer",
+  "SIH '24 Grand Finale Runner-up",
 ];
 
 const HeroSection = () => {
@@ -57,23 +57,23 @@ const HeroSection = () => {
       <div
         className="pointer-events-none absolute inset-0 opacity-30 blur-2xl transition-all duration-700 ease-out"
         style={{
-  background: `radial-gradient(
-    220px circle at ${mousePos.x}% ${mousePos.y}%,
-    hsla(0,0%,20%,0.25),
-    transparent 65%
-  )`,
-}}
+          background: `radial-gradient(
+            220px circle at ${mousePos.x}% ${mousePos.y}%,
+            hsla(0,0%,20%,0.25),
+            transparent 65%
+          )`,
+        }}
       />
 
       {/* Grid pattern overlay */}
       <div
-  className="pointer-events-none absolute inset-0 opacity-[0.03] transition-transform duration-500 ease-out"
-  style={{
-    backgroundImage: `linear-gradient(hsl(0 0% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 50%) 1px, transparent 1px)`,
-    backgroundSize: "60px 60px",
-    transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`
-  }}
-/>
+        className="pointer-events-none absolute inset-0 opacity-[0.03] transition-transform duration-500 ease-out"
+        style={{
+          backgroundImage: `linear-gradient(hsl(0 0% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 50%) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+          transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
+        }}
+      />
 
       {/* Floating particles */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -100,20 +100,30 @@ const HeroSection = () => {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-terminal-green opacity-75 animate-ping" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-terminal-green" />
               </span>
-              <span className="text-xs font-mono text-muted-foreground">Available for opportunities</span>
+              <span className="text-xs font-mono text-muted-foreground">
+                Available for opportunities
+              </span>
             </div>
 
             {/* Terminal greeting */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
+            <div
+              className="animate-fade-in-up"
+              style={{ animationDelay: "0.2s", opacity: 0 }}
+            >
               <p className="text-sm text-muted-foreground font-mono mb-4">
-                <span className="text-green-600 dark:text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.9)]">$</span> whoami
+                <span className="text-green-600 dark:text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.9)]">
+                  $
+                </span>{" "}
+                whoami
               </p>
 
-              <h1 className="font-display text-6xl md:text-8xl font-black tracking-tight leading-[0.95]">
-                <span className="inline-block hover:translate-x-1 transition-transform duration-300">Sathvik</span>
+              <h1 className="font-display text-5xl md:text-7xl font-black tracking-tight leading-[0.95]">
+                <span className="inline-block hover:translate-x-1 transition-transform duration-300">
+                  Annam Pranav
+                </span>
                 <br />
                 <span className="inline-block hover:translate-x-1 transition-transform duration-300">
-                  Rudam<span className="text-muted-foreground">.</span>
+                  Reddy<span className="text-muted-foreground">.</span>
                 </span>
               </h1>
             </div>
@@ -124,7 +134,9 @@ const HeroSection = () => {
               style={{ animationDelay: "0.35s", opacity: 0 }}
             >
               <span className="text-terminal-green mr-2 select-none">&gt;</span>
-              <span className="text-muted-foreground">{titles[titleIndex].slice(0, charIndex)}</span>
+              <span className="text-muted-foreground">
+                {titles[titleIndex].slice(0, charIndex)}
+              </span>
               <span className="cursor-blink ml-0.5 inline-block w-2 h-5 bg-foreground/80" />
             </div>
 
@@ -133,9 +145,10 @@ const HeroSection = () => {
               className="text-muted-foreground leading-relaxed max-w-xl text-sm md:text-base animate-fade-in-up"
               style={{ animationDelay: "0.5s", opacity: 0 }}
             >
-              A Computer Science Engineering student with a strong passion for software development and problem solving. Specializing in{" "}
-              <span className="text-foreground font-medium">Java programming</span> and{" "}
-              <span className="text-foreground font-medium">Data Structures & Algorithms</span>.
+              A Computer Science Engineering undergraduate focused on technology-driven operations and automation.
+              Experienced in{" "}
+              <span className="text-foreground font-medium">Data Analytics</span>,{" "}
+              <span className="text-foreground font-medium">Python development</span>, and workflow automation platforms.
             </p>
 
             {/* CTA Buttons */}
@@ -148,24 +161,27 @@ const HeroSection = () => {
                 className="group bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:shadow-[0_0_30px_hsl(0_0%_100%/0.15)] transition-all duration-300 flex items-center gap-2"
               >
                 View Projects
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={16}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </a>
               <a
-                href="#contact"
+                href="mailto:annampranav05@gmail.com"
                 className="group border border-border px-7 py-3.5 rounded-full text-sm font-medium text-foreground hover:bg-card hover:border-muted-foreground/30 transition-all duration-300 flex items-center gap-2"
               >
                 <Mail size={16} />
                 Contact Me
               </a>
               <a
-  href="/sathvikrudam.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group border border-border px-7 py-3.5 rounded-full text-sm font-medium text-muted-foreground hover:bg-card hover:text-foreground hover:border-muted-foreground/30 transition-all duration-300 flex items-center gap-2"
->
-  <Download size={16} />
-  Resume
-</a>
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border border-border px-7 py-3.5 rounded-full text-sm font-medium text-muted-foreground hover:bg-card hover:text-foreground hover:border-muted-foreground/30 transition-all duration-300 flex items-center gap-2"
+              >
+                <Download size={16} />
+                Resume
+              </a>
             </div>
 
             {/* Social links */}
@@ -173,9 +189,11 @@ const HeroSection = () => {
               className="flex items-center gap-4 pt-2 animate-fade-in-up"
               style={{ animationDelay: "0.8s", opacity: 0 }}
             >
-              <span className="text-xs font-mono text-muted-foreground">find_me →</span>
+              <span className="text-xs font-mono text-muted-foreground">
+                find_me →
+              </span>
               <a
-                href="https://github.com/sathvikrudam"
+                href="https://github.com/AnnamPranav"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -183,7 +201,7 @@ const HeroSection = () => {
                 <Github size={18} />
               </a>
               <a
-                href="https://www.linkedin.com/in/sathvikrudam/"
+                href="https://www.linkedin.com/in/pranav-annam-65b283218/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -206,7 +224,7 @@ const HeroSection = () => {
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-border group-hover:border-muted-foreground/30 transition-all duration-500">
                 <img
                   src={profilePhoto}
-                  alt="Sathvik Rudam - Computer Science Student"
+                  alt="Annam Pranav Reddy - Computer Science Student"
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 />
                 {/* Overlay gradient */}
@@ -215,19 +233,17 @@ const HeroSection = () => {
 
               {/* Floating tag */}
               <div className="absolute -bottom-3 -right-3 bg-card border border-border rounded-xl px-4 py-2 font-mono text-xs text-muted-foreground shadow-lg backdrop-blur-sm">
-                <span className="text-terminal-green">●</span> java dev
+                <span className="text-terminal-green">●</span> Python & RPA
               </div>
 
               {/* Stats tag */}
               <div className="absolute -top-3 -left-3 bg-card border border-border rounded-xl px-4 py-2 font-mono text-xs shadow-lg backdrop-blur-sm">
-                <span className="text-foreground font-bold">O</span>
-                <span className="text-muted-foreground ml-1">+ve</span>
+                <span className="text-foreground font-bold">SIH '24</span>
+                <span className="text-muted-foreground ml-1">Runner</span>
               </div>
             </div>
           </div>
         </div>
-
-        
       </div>
 
       <style>{`
