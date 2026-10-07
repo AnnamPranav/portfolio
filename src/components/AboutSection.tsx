@@ -39,7 +39,7 @@ const focusAreas = [
 
 const stats = [
   {
-    value: "7.0",
+    value: "7.5",
     label: "CGPA",
   },
   {
@@ -70,11 +70,10 @@ const AboutSection = () => {
       <div ref={ref} className="container mx-auto px-6 relative z-10">
         {/* Heading */}
         <div
-          className={`transition-all duration-700 ${
-            isVisible
+          className={`transition-all duration-700 ${isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
-          }`}
+            }`}
         >
           <div className="flex items-center gap-3 mb-3">
             <Terminal size={16} className="text-terminal-green" />
@@ -91,11 +90,10 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-5 gap-16">
           {/* LEFT SIDE */}
           <div
-            className={`lg:col-span-3 space-y-6 transition-all duration-700 delay-200 ${
-              isVisible
+            className={`lg:col-span-3 space-y-6 transition-all duration-700 delay-200 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             {/* About Terminal */}
             <div className="bg-card border border-border rounded-2xl overflow-hidden">
@@ -171,13 +169,11 @@ const AboutSection = () => {
               {stats.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className={`bg-card border border-border rounded-xl p-4 text-center hover:border-muted-foreground/30 transition-all duration-500 delay-${
-                    (i + 3) * 100
-                  } ${
-                    isVisible
+                  className={`bg-card border border-border rounded-xl p-4 text-center hover:border-muted-foreground/30 transition-all duration-500 delay-${(i + 3) * 100
+                    } ${isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4"
-                  }`}
+                    }`}
                 >
                   <p className="font-display text-2xl font-black text-foreground">
                     {stat.value}
@@ -203,18 +199,17 @@ const AboutSection = () => {
                 <div>🏆 Smart India Hackathon 2024 Runner</div>
                 <div>💼 Data Analytics Intern at Zenix Automotive</div>
                 <div>📊 Data Analytics Intern at Besant Technologies</div>
-                <div>🚀 Built 6+ Software, AI & IoT Projects</div>
+                {/*                <div>🚀 Built 6+ Software, AI & IoT Projects</div> */}
               </div>
             </div>
           </div>
 
           {/* RIGHT SIDE */}
           <div
-            className={`lg:col-span-2 space-y-3 transition-all duration-700 delay-400 ${
-              isVisible
+            className={`lg:col-span-2 space-y-3 transition-all duration-700 delay-400 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-4">
               Focus Areas
