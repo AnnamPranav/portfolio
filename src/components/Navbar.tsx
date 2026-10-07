@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <a href="#" className="font-display text-xl font-bold tracking-tight">
           <span className="text-muted-foreground font-light">{"<"}</span>
-          Pranav
+          Pranav Annam
           <span className="text-muted-foreground font-light">{" />"}</span>
         </a>
 

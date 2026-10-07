@@ -5,7 +5,7 @@ const education = [
   {
     degree: "B.Tech in Computer Science & Engineering",
     institution: "Vardhaman College of Engineering, Shamshabad",
-    detail: "CGPA: 7",
+    detail: "CGPA: 7.5",
     period: "2023 – 2027",
     status: "JNTUH · Ongoing",
     highlight: true,
@@ -13,7 +13,7 @@ const education = [
   {
     degree: "Intermediate (MPC)",
     institution: "Sri Chaitanya Junior College, Manikonda",
-    detail: "CGPA / Percentage: 8.47",
+    detail: "Percentage: 81",
     period: "2021 – 2023",
     status: "TGBIE",
     highlight: false,
@@ -21,9 +21,9 @@ const education = [
   {
     degree: "Tenth Class (10th)",
     institution: "Sri Chaitanya School, Suncity",
-    detail: "CGPA / Percentage: 10",
+    detail: "CGPA: 10",
     period: "2021",
-    status: "BSET",
+    status: "TGBSE",
     highlight: false,
   },
 ];
@@ -52,9 +52,8 @@ const EducationSection = () => {
           {education.map((item, i) => (
             <div
               key={i}
-              className={`group relative bg-card border rounded-2xl p-6 transition-all duration-700 hover:border-muted-foreground/30 hover:-translate-y-1 ${
-                item.highlight ? "border-muted-foreground/20" : "border-border"
-              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`group relative bg-card border rounded-2xl p-6 transition-all duration-700 hover:border-muted-foreground/30 hover:-translate-y-1 ${item.highlight ? "border-muted-foreground/20" : "border-border"
+                } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${(i + 2) * 150}ms` }}
             >
               {item.highlight && (
